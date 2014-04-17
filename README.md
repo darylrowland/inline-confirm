@@ -32,7 +32,7 @@ inline-confirm(icon="icon-trash-can", text='Delete', mainclass="btn btn-orange",
 There are a number of attributes you can set to configure the directive, these are detailed below:
 
 | Attribute     | Description | Required  | Default |
-| ------------- |-------------| ----------|
+| ------------- |-------------| ----------|-------- |
 | type          | The type of the element which will trigger the action  | Yes        | |
 | text          | The text to display, e.g. Delete, when this button/link is in its default state | Yes | |
 | yestext       | The text for the 'confirmation' element | No | 'Yes' |
