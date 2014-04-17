@@ -1,9 +1,16 @@
 inline-confirm
 ==============
 
-AngularJS Inline Confirm Button/Text Directive
+AngularJS Inline Confirm Icon/Button/Text Directive
 
-Very simple directive that lets you quickly and easily create inline confirm buttons or links for your Angular projects.
+Fork from https://github.com/darylrowland
+
+Improved to add:
+ - icon type display (Nice with bootstrap glyphicon)
+ - Custom text on confirmation elements 'yes' and 'no' (Usefull for translation)
+ - hide option for the action element
+
+Very simple directive that lets you quickly and easily create inline confirm icon or buttons or links for your Angular projects.
 I use this a lot for delete buttons.
 
 ##Usage:
@@ -24,14 +31,20 @@ inline-confirm(icon="icon-trash-can", text='Delete', mainclass="btn btn-orange",
 ##Attributes
 There are a number of attributes you can set to configure the directive, these are detailed below:
 
-| Attribute     | Description | Required  |
-| ------------- |-------------| ---------|
-| icon          | An icon class to use, e.g. for something like a trash can. Best used with icon fonts like font awesome | No        |
-| text | The text to display, e.g. Delete, when this button/link is in its default state | Yes |
-| mainclass | Any classes you want to apply for styling the button/link, separated by spaces | No |
-| confirmfunction | The function that should be called when the user clicks on the 'yes' button | Yes |
+| Attribute     | Description | Required  | Default |
+| ------------- |-------------| ----------|
+| type          | The type of the element which will trigger the action  | Yes        | |
+| text          | The text to display, e.g. Delete, when this button/link is in its default state | Yes | |
+| yestext       | The text for the 'confirmation' element | No | 'Yes' |
+| notext        | The text for the 'cancellation' element | No | 'No' |
+| confirmfunction | The function that should be called when the user clicks on the 'yes' button | Yes | |
+| mainclass     | Any classes you want to apply to the main element holding the all inline confirmation | No | |
+| actionclass   | Classes for the element which will trigger the inline confirmation | No | |
+| confirmclass  | Any classes you want to apply to the confirmation element ('yes' and 'no') | No | |
+| confirmclass  | Any classes you want to apply to the confirmation element ('yes' and 'no') | No | |
+| hideonconfirm | Set to true if you want to hide the element which will trigger the action. | No | false |
 
 ##License
-You're free to use & modify this code however you see fit. Let me know about any enhancements you make though please!
+MIT License.
 
 
