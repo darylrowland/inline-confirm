@@ -5,9 +5,9 @@
     <span class="{{actionClass}}" ng-hide="showConfirm && hideOnConfirm">
     </span>
     <span ng-show="showConfirm">
-      <button class="{{confirmClass}}" ng-click="yesClick($event)">{{yesText}}
+      <button class="{{confirmClass}} confirm-yes" ng-click="yesClick($event)">{{yesText}}
       </button>
-      <button class="{{confirmClass}}" ng-click="noClick($event)">{{noText}}
+      <button class="{{confirmClass}} confirm-no" ng-click="noClick($event)">{{noText}}
       </button>
     </span>
   </span>
@@ -20,10 +20,10 @@
       {{text}}
     </a>
     <span ng-show="showConfirm">
-      <a href="" ng-click="yesClick($event)" class="{{confirmClass}}">
+      <a href="" ng-click="yesClick($event)" class="{{confirmClass}} confirm-yes">
 	{{yesText}}
       </a>
-      <a href="" ng-click="noClick($event)" class="{{confirmClass}}">
+      <a href="" ng-click="noClick($event)" class="{{confirmClass}} confirm-no">
 	{{noText}}
       </a>
     </span>
@@ -35,9 +35,9 @@
       {{text}}
     </button>
     <span ng-show="showConfirm">
-      <button class="{{confirmClass}}" ng-click="yesClick($event)">{{yesText}}
+      <button class="{{confirmClass}} confirm-yes" ng-click="yesClick($event)">{{yesText}}
       </button>
-      <button class="{{confirmClass}}" ng-click="noClick($event)">{{noText}}
+      <button class="{{confirmClass}} confirm-no" ng-click="noClick($event)">{{noText}}
       </button>
     </span>
   </span>
