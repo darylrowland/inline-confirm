@@ -1,0 +1,45 @@
+<span ng-show="show" class="inline-confirm" >
+
+  <!-- icon -->
+  <span class="{{mainClass}}" title="{{text}}" ng-click="showConfirmOptions()" ng-if="type == 'icon'">
+    <span class="{{actionClass}}" ng-hide="showConfirm && hideOnConfirm">
+    </span>
+    <span ng-show="showConfirm">
+      <button class="{{confirmClass}} confirm-yes" ng-click="yesClick($event)">{{yesText}}
+      </button>
+      <button class="{{confirmClass}} confirm-no" ng-click="noClick($event)">{{noText}}
+      </button>
+    </span>
+  </span>
+
+  <!-- text -->
+  <span class="{{mainClass}}" ng-if="type == 'text'">
+    <i ng-click="showConfirmOptions()" ng-if="actionClass" class="{{actionClass}}" ng-hide="showConfirm && hideOnConfirm">
+    </i>
+    <a href="" ng-click="showConfirmOptions()" ng-hide="showConfirm && hideOnConfirm">
+      {{text}}
+    </a>
+    <span ng-show="showConfirm">
+      <a href="" ng-click="yesClick($event)" class="{{confirmClass}} confirm-yes">
+	{{yesText}}
+      </a>
+      <a href="" ng-click="noClick($event)" class="{{confirmClass}} confirm-no">
+	{{noText}}
+      </a>
+    </span>
+  </span>
+
+  <!-- button -->
+  <span class="{{mainClass}}" ng-if="type == 'button'">
+    <button ng-click="showConfirmOptions()" ng-hide="showConfirm && hideOnConfirm">
+      {{text}}
+    </button>
+    <span ng-show="showConfirm">
+      <button class="{{confirmClass}} confirm-yes" ng-click="yesClick($event)">{{yesText}}
+      </button>
+      <button class="{{confirmClass}} confirm-no" ng-click="noClick($event)">{{noText}}
+      </button>
+    </span>
+  </span>
+
+</span>
